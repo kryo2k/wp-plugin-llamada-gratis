@@ -42,11 +42,22 @@
   display: block;
   padding: 0 1em;
 }
-/* line 47, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+/* line 48, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis a .sprite:before {
+  background: transparent url("../images/phone.png") 0 0 no-repeat;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+}
+/* line 57, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a:hover {
   background-color: white;
 }
-/* line 52, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
-.llamada-gratis img {
-  border: none;
+/* line 61, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis a:hover .sprite:before {
+  background-position: 0 -50px;
 }

@@ -64,7 +64,7 @@
 		return me; // return latest config
 	}
 	function createEl(sel) {
-		return $('<div><a><img/><a></div>')
+		return $('<div><a><div class="sprite"></div><a></div>')
 			.appendTo(sel);
 	}
 	function showCallWindow(tourUrl, baseCls, closeHint, windowTitle,
