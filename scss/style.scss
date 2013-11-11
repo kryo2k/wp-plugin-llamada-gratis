@@ -42,13 +42,14 @@
 	a {
 		border: none;
 		display: block;
-		padding: 0 1em;
+		padding: 1em;
 
 		.sprite {
 			background-color: black;
 			background: transparent url('../images/phone.png') 0 0 no-repeat;
 			display: inline-block;
 			width: 50px;
+			height: 69px;
 			@include border-radius(1em);
 		}
 
