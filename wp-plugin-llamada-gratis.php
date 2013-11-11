@@ -43,7 +43,7 @@ function llama_admin_plugin_action_links($links, $file) {
 	return $links;
 }
 function llama_admin_menu() {
-	add_options_page( __ ( 'Llamada Gratis Manager', LLAMA_I18N ), __ ( 'Llamada gratiss', LLAMA_I18N ), 'manage_options', LLAMA_KEY_SETTINGS, 'llama_admin_options' );
+	add_options_page( __ ( 'Llamada Gratis Manager', LLAMA_I18N ), __ ( 'Llamada gratis', LLAMA_I18N ), 'manage_options', LLAMA_KEY_SETTINGS, 'llama_admin_options' );
 }
 function llama_admin_options() {
 	if ( !current_user_can( 'manage_options' ) )  {
