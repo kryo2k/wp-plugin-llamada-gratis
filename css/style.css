@@ -38,13 +38,18 @@
 }
 /* line 42, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
   border: none;
   display: block;
   padding: 1em;
+  background-color: #efe;
 }
-/* line 47, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+/* line 49, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a .sprite {
-  background-color: black;
   background: transparent url("../images/phone.png") 0 0 no-repeat;
   display: inline-block;
   width: 50px;
@@ -55,14 +60,9 @@
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 56, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+/* line 57, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a:hover {
   background-color: white;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
-  border-radius: 1em;
 }
 /* line 60, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a:hover .sprite {
