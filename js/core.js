@@ -48,10 +48,26 @@
 	}
 	function showCallWindow(tourUrl, baseCls, closeHint, windowTitle,
 			windowWidth, windowHeight) {
-		var $o, $w, root = 'html', closeWin = function(e){
+		var $o, $w, $win = $(window), root = 'html',
+		centerWin = function(){
+			var
+			wX = $win.width(), wY = $win.height(),
+			pX = ((wX/2)-(windowWidth/2)),
+			pY = ((wY/2)-(windowHeight/2));
+
+			if(pX < 0) pX = 0;
+			if(pY < 0) pY = 0;
+
+			$w.css({
+				left: pX,
+				top: pY
+			});
+		},
+		closeWin = function(e){
 			e.preventDefault();
 			$o.remove();
 			$w.remove();
+			$win.un('resize', centerWin);
 		};
 		$o = $('<div>').appendTo(root);
 		$w = $(['<div class="'+baseCls+'-window fixed">',
@@ -65,6 +81,8 @@
 		 '</div>'].join(''))
 			.appendTo(root);
 
+		$win.on('resize', centerWin);
+
 		$w.css({
 			width: windowWidth,
 			height: windowHeight
@@ -73,16 +91,16 @@
 		$o.addClass(baseCls + '-overlay').on('click', closeWin);
 
 		$w.find('a').attr({
-				title: closeHint,
-				href: '#close-tour'
-			}).on('click', closeWin);
+			title: closeHint,
+			href: '#close-tour'
+		}).on('click', closeWin);
 
 		$w.find('h3').html(windowTitle);
 
 		$w.find('iframe').attr({
-				src: tourUrl,
-				frameborder: 0
-			});
+			src: tourUrl,
+			frameborder: 0
+		});
 	}
 	function render(me) {
 
