@@ -21,7 +21,28 @@
 		windowWidth: '406px',
 		windowHeight: '600px',
 		url: null
-	};
+	},
+	debounce = function(func, threshold, execAsap) {
+
+		var timeout;
+
+		return function debounced() {
+			var obj = this, args = arguments;
+			function delayed() {
+				if (!execAsap)
+					func.apply(obj, args);
+				timeout = null;
+			}
+
+			if (timeout)
+				clearTimeout(timeout);
+			else if (execAsap)
+				func.apply(obj, args);
+
+			timeout = setTimeout(delayed, threshold || 100);
+		};
+	}
+
 	function unconfigure(me) {
 
 		if($el !== undefined) {
@@ -55,8 +76,6 @@
 			pX = ((wX/2)-($w.width()/2)),
 			pY = ((wY/2)-($w.height()/2));
 
-			console.log(wX,pX,$w.width(),$w.height(),wY,pY);
-
 			if(pX < 0) pX = 0;
 			if(pY < 0) pY = 0;
 
@@ -83,7 +102,7 @@
 		 '</div>'].join(''))
 			.appendTo(root);
 
-		$win.on('resize', centerWin);
+		$win.on('resize', debounce(centerWin,100,true));
 
 		$w.css({
 			width: windowWidth,
@@ -103,7 +122,6 @@
 			src: tourUrl,
 			frameborder: 0
 		});
-		centerWin();
 	}
 	function render(me) {
 
