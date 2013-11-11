@@ -1,100 +1,7 @@
-@CHARSET "ISO-8859-1";
+@CHARSET "UTF-8";
 @import "compass/css3";
 
-$padding: 1em;
-$window-head-height: 2em;
-$window-head-font-size: $window-head-height * 0.6;
-$window-color-bg: white;
-$window-color-fg: black;
-$window-color-toolbar-bg: #eee;
-$window-color-toolbar-fg: black;
-
-.llamada-gratis-overlay {
-	z-index: 9998;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.5);
-}
-
-.llamada-gratis-window {
-	z-index: 9999;
-	position: fixed;
-	left: 10%;
-	right: 10%;
-	bottom: 10%;
-	top: 10%;
-	background-color: $window-color-bg;
-	color: $window-color-fg;
-	@include border-radius(1em);
-	@include box-shadow(4px 5px 15px rgba(#000,0.7));
-
-	.window-wrapper {
-		margin: $padding;
-		position: absolute;
-		left:0; right: 0; bottom: 0; top: 0;
-	}
-
-	a,
-	h3,
-	iframe {
-		position: absolute;
-		display: block;
-	}
-	
-	a,
-	h3 {
-		background-color: $window-color-toolbar-bg;
-		color: $window-color-toolbar-fg;
-		font-size: $window-head-font-size;
-		line-height: $window-head-height;
-	}
-
-	a {
-		right: 0;
-		top: 0;
-		width: 3em;
-
-		&:before {
-			content: '\00D7';
-			display: block;
-			font-size: 1em;
-			text-align: center;
-		}
-		&:hover {
-			background: black;
-			color: white;
-			text-decoration: none;
-		}
-	}
-	h3 {
-		margin: 0;
-		padding: 0 0.5em;
-		left: 0;
-		top: 0;
-		right: 3em;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.iframe-wrapper {
-		position: absolute;
-		top: $window-head-height + $padding;
-		left: 0;
-		right: 0;
-		bottom: 0;
-
-		iframe {
-			width: 100%;
-			height: 100%;
-		}
-	}
-}
-
 .llamada-gratis {
-	z-index: 9997;
 
 	// common position properties:
 	&.bottom-right,
@@ -105,35 +12,37 @@ $window-color-toolbar-fg: black;
 		display: block;
 	}
 
+	&.inline-block {
+		display: inline-block;
+	}
+
+	&.inline {
+		display: inline;
+	}
+
 	// specific position properties:
 	&.bottom-right {
 		bottom: 0;
 		right: 0;
-		padding: 0 $padding $padding 0;
 	}
 	&.bottom-left {
 		bottom: 0;
 		left: 0;
-		padding: 0 0 $padding $padding;
 	}
 	&.top-right {
 		top: 0;
 		right: 0;
-		padding: $padding $padding 0 0;
 	}
 	&.top-left {
 		top: 0;
 		left: 0;
-		padding: $padding 0 0 $padding;
 	}
 
-	// link surrounding image
 	a {
 		border: none;
 		display: block;
 	}
 
-	// promo image
 	img {
 		border: none;
 	}

@@ -199,11 +199,11 @@ function llama_get_targetselector() {
 	return get_option ( LLAMA_SETTING_TARGETSEL, 'header' );
 }
 function llama_get_position() {
-	return get_option ( LLAMA_SETTING_POSITION, 'bottom-left' );
+	return get_option ( LLAMA_SETTING_POSITION, 'inline' );
 }
 function llama_get_image() {
 	return get_option ( LLAMA_SETTING_IMAGE, path_join(plugin_dir_url(__FILE__),
-		"images/default.png") );
+		"images/phone.png") );
 }
 function llama_get_imagetitle() {
 	return get_option ( LLAMA_SETTING_IMAGETITLE, "Llamada gratis" );
