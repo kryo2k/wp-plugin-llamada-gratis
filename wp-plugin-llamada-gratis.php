@@ -199,7 +199,7 @@ function llama_get_targetselector() {
 	return get_option ( LLAMA_SETTING_TARGETSEL, 'header' );
 }
 function llama_get_position() {
-	return get_option ( LLAMA_SETTING_POSITION, 'bottom-right' );
+	return get_option ( LLAMA_SETTING_POSITION, 'bottom-left' );
 }
 function llama_get_image() {
 	return get_option ( LLAMA_SETTING_IMAGE, path_join(plugin_dir_url(__FILE__),

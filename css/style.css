@@ -1,0 +1,141 @@
+@CHARSET "ISO-8859-1";
+/* line 12, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-overlay {
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 22, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window {
+  z-index: 9999;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  top: 10%;
+  background-color: white;
+  color: black;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.7);
+}
+/* line 34, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window .window-wrapper {
+  margin: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+/* line 42, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window a,
+.llamada-gratis-window h3,
+.llamada-gratis-window iframe {
+  position: absolute;
+  display: block;
+}
+/* line 48, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window a,
+.llamada-gratis-window h3 {
+  background-color: #eeeeee;
+  color: black;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+/* line 55, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window a {
+  right: 0;
+  top: 0;
+  width: 3em;
+}
+/* line 60, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window a:before {
+  content: '\00D7';
+  display: block;
+  font-size: 1em;
+  text-align: center;
+}
+/* line 66, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window a:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+/* line 72, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window h3 {
+  margin: 0;
+  padding: 0 0.5em;
+  left: 0;
+  top: 0;
+  right: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 82, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window .iframe-wrapper {
+  position: absolute;
+  top: 3em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 89, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis-window .iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 96, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis {
+  z-index: 9997;
+}
+/* line 103, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis.bottom-right, .llamada-gratis.bottom-left, .llamada-gratis.top-right, .llamada-gratis.top-left {
+  position: absolute;
+  display: block;
+}
+/* line 109, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis.bottom-right {
+  bottom: 0;
+  right: 0;
+  padding: 0 1em 1em 0;
+}
+/* line 114, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis.bottom-left {
+  bottom: 0;
+  left: 0;
+  padding: 0 0 1em 1em;
+}
+/* line 119, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis.top-right {
+  top: 0;
+  right: 0;
+  padding: 1em 1em 0 0;
+}
+/* line 124, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis.top-left {
+  top: 0;
+  left: 0;
+  padding: 1em 0 0 1em;
+}
+/* line 131, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis a {
+  border: none;
+  display: block;
+}
+/* line 137, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
+.llamada-gratis img {
+  border: none;
+}

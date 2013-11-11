@@ -3,14 +3,14 @@
 
 	var
 	singleton, $el,
-	optKey = 't360_config',
+	optKey = 'llama_config',
 	config = {},
 	defaultOpts = {
 		enabled: false,
 		selector: 'header',
 		positionCls: 'bottom-right',
-		baseCls: 't360-promo',
-		hashmark: 'launch-360-tour',
+		baseCls: 'llamada-gratis',
+		hashmark: 'launch-llamada-gratis',
 		image: null,
 		imageTitle: null,
 		imageWidth: null,
@@ -18,7 +18,7 @@
 		windowWidth: '90%',
 		windowHeight: '90%',
 		windowHintClose: 'Close tour',
-		windowTitle: '360 Tour',
+		windowTitle: 'Llamada Gratis',
 		url: null
 	};
 	function unconfigure(me) {
@@ -84,7 +84,7 @@
 				.on('click',function(e){
 					e.preventDefault();
 					showTourWindow(config.url, config.baseCls,
-							config.windowHintClose, config.windowTitle);
+						config.windowHintClose, config.windowTitle);
 				});
 		}
 
@@ -108,7 +108,7 @@
 		return me;
 	}
 
-	function T360(cfg){
+	function LlamadaGratis(cfg){
 		var me = this;
 
 		me.reconfigure = function(cfg, performRender) {
@@ -129,15 +129,15 @@
 		return configure(me, cfg);
 	};
 
-	T360.getInstance = function() {
+	LlamadaGratis.getInstance = function() {
 		return singleton ? singleton :
-			singleton = new T360($.extend(true,{},defaultOpts,window[optKey]));
+			singleton = new LlamadaGratis($.extend(true,{},defaultOpts,window[optKey]));
 	};
 
-	window.T360 = T360;
+	window.LlamadaGratis = LlamadaGratis;
 
 	$(function(){
-		T360.getInstance().render();
+		LlamadaGratis.getInstance().render();
 	});
 
 })(jQuery);

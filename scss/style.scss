@@ -9,8 +9,7 @@ $window-color-fg: black;
 $window-color-toolbar-bg: #eee;
 $window-color-toolbar-fg: black;
 
-
-.t360-promo-overlay {
+.llamada-gratis-overlay {
 	z-index: 9998;
 	position: fixed;
 	top: 0;
@@ -20,7 +19,7 @@ $window-color-toolbar-fg: black;
 	background-color: rgba(0,0,0,0.5);
 }
 
-.t360-promo-window {
+.llamada-gratis-window {
 	z-index: 9999;
 	position: fixed;
 	left: 10%;
@@ -94,7 +93,7 @@ $window-color-toolbar-fg: black;
 	}
 }
 
-.t360-promo {
+.llamada-gratis {
 	z-index: 9997;
 
 	// common position properties:
