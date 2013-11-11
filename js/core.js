@@ -52,10 +52,10 @@
 		centerWin = function(){
 			var
 			wX = $win.width(), wY = $win.height(),
-			pX = ((wX/2)-(windowWidth/2)),
-			pY = ((wY/2)-(windowHeight/2));
+			pX = ((wX/2)-($w.width()/2)),
+			pY = ((wY/2)-($w.height()/2));
 
-			console.log(wX,pX,windowWidth,windowHeight,wY,pY);
+			console.log(wX,pX,$w.width(),$w.height(),wY,pY);
 
 			if(pX < 0) pX = 0;
 			if(pY < 0) pY = 0;
