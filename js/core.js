@@ -18,6 +18,8 @@
 		imageHeight: null,
 		windowHintClose: 'Close tour',
 		windowTitle: 'Llamada Gratis',
+		windowWidth: '406px',
+		windowHeight: '600px',
 		url: null
 	};
 	function unconfigure(me) {
@@ -44,7 +46,8 @@
 		return $('<div><a><img/><a></div>')
 			.appendTo(sel);
 	}
-	function showCallWindow(tourUrl, baseCls, closeHint, windowTitle) {
+	function showCallWindow(tourUrl, baseCls, closeHint, windowTitle,
+			windowWidth, windowHeight) {
 		var $o, $w, root = 'html', closeWin = function(e){
 			e.preventDefault();
 			$o.remove();
@@ -61,6 +64,11 @@
 		 	'</div>',
 		 '</div>'].join(''))
 			.appendTo(root);
+
+		$w.css({
+			width: windowWidth,
+			height: windowHeight
+		});
 
 		$o.addClass(baseCls + '-overlay').on('click', closeWin);
 
@@ -88,7 +96,8 @@
 				.on('click',function(e){
 					e.preventDefault();
 					showCallWindow(config.url, config.simpleDlgBaseCls,
-						config.windowHintClose, config.windowTitle);
+						config.windowHintClose, config.windowTitle,
+						config.windowWidth, config.windowHeight);
 				});
 		}
 
