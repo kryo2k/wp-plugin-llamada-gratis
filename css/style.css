@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 /* line 4, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis {
-  margin: 0 0 0 1em;
+  margin: 1em 1em 0 0;
 }
 /* line 11, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis.bottom-right, .llamada-gratis.bottom-left, .llamada-gratis.top-right, .llamada-gratis.top-left {
