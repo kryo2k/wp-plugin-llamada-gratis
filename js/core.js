@@ -101,6 +101,7 @@
 			src: tourUrl,
 			frameborder: 0
 		});
+		centerWin();
 	}
 	function render(me) {
 
