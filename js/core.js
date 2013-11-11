@@ -55,6 +55,8 @@
 			pX = ((wX/2)-(windowWidth/2)),
 			pY = ((wY/2)-(windowHeight/2));
 
+			console.log(wX,pX,windowWidth,windowHeight,wY,pY);
+
 			if(pX < 0) pX = 0;
 			if(pY < 0) pY = 0;
 
