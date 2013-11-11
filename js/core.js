@@ -153,10 +153,7 @@
 
 		$el.find('img')
 			.attr({
-				src: config.image,
-				alt: config.imageTitle,
-				width: config.imageWidth,
-				height: config.imageHeight
+				alt: config.imageTitle
 			});
 
 		return me;
