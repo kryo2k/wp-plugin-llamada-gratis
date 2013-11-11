@@ -44,7 +44,7 @@
 		border: none;
 		display: block;
 		padding: 1em;
-		background-color: #efe;
+		background-color: rgba(#efe,0.4);
 
 		.sprite {
 			background: transparent url('../images/phone.png') 0 0 no-repeat;
@@ -55,7 +55,7 @@
 		}
 
 		&:hover {
-			background-color: white;
+			background-color: rgba(white,0.7);
 
 			.sprite {
 				background-position: -50px 0;

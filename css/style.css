@@ -46,7 +46,7 @@
   border: none;
   display: block;
   padding: 1em;
-  background-color: #efe;
+  background-color: rgba(238, 255, 238, 0.4);
 }
 /* line 49, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a .sprite {
@@ -62,7 +62,7 @@
 }
 /* line 57, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 /* line 60, C:/Users/Hans Doller/Documents/GitHub/wp-plugin-llamada-gratis/scss/style.scss */
 .llamada-gratis a:hover .sprite {
