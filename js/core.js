@@ -44,7 +44,7 @@
 		return $('<div><a><img/><a></div>')
 			.appendTo(sel);
 	}
-	function showTourWindow(tourUrl, baseCls, closeHint, windowTitle) {
+	function showCallWindow(tourUrl, baseCls, closeHint, windowTitle) {
 		var $o, $w, root = 'html', closeWin = function(e){
 			e.preventDefault();
 			$o.remove();
@@ -87,7 +87,7 @@
 			$el.find('a')
 				.on('click',function(e){
 					e.preventDefault();
-					showTourWindow(config.url, config.simpleDlgBaseCls,
+					showCallWindow(config.url, config.simpleDlgBaseCls,
 						config.windowHintClose, config.windowTitle);
 				});
 		}
@@ -116,7 +116,6 @@
 		var me = this;
 
 		me.reconfigure = function(cfg, performRender) {
-			console.log("reconfigure");
 			unconfigure(me);
 			configure(me, cfg);
 			return performRender ? render(me) : me;
