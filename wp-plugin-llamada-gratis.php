@@ -17,6 +17,7 @@ define ( "LLAMA_I18N", 'llama' );
 define ( "LLAMA_KEY_SETTINGS", 'llama-settings' );
 
 define ( "LLAMA_SETTING_ENABLED",   'llama_enabled' );
+define ( "LLAMA_SETTING_USERID",    'llama_userid' );
 define ( "LLAMA_SETTING_SITEID",    'llama_siteid' );
 define ( "LLAMA_SETTING_BASEURL",   'llama_baseurl' );
 define ( "LLAMA_SETTING_TARGETSEL", 'llama_targetselector' );
@@ -66,6 +67,9 @@ function llama_admin_setting_section_image() {
 function llama_admin_setting_enabled() {
 	echo sprintf('<input name="%s" type="checkbox" value="1" class="code"%s>',LLAMA_SETTING_ENABLED, checked( 1, llama_get_enabled(), false ));
 }
+function llama_admin_setting_userid() {
+	echo sprintf('<input name="%s" size="40" type="text" value="%s">',LLAMA_SETTING_USERID, llama_get_userid());
+}
 function llama_admin_setting_siteid() {
 	echo sprintf('<input name="%s" size="40" type="text" value="%s">',LLAMA_SETTING_SITEID, llama_get_siteid());
 }
@@ -108,10 +112,16 @@ function llama_admin_get_settings_fields() {
 				'sanitize_callback' => 'intval',
 				'args'              => array()
 			),
+			LLAMA_SETTING_USERID => array(
+				'title'             => __( 'User id', LLAMA_I18N ),
+				'callback'          => 'llama_admin_setting_userid',
+				'sanitize_callback' => 'intval',
+				'args'              => array()
+			),
 			LLAMA_SETTING_SITEID => array(
 				'title'             => __( 'Site id', LLAMA_I18N ),
 				'callback'          => 'llama_admin_setting_siteid',
-				'sanitize_callback' => 'trim',
+				'sanitize_callback' => 'intval',
 				'args'              => array()
 			),
 			LLAMA_SETTING_BASEURL => array(
@@ -212,7 +222,10 @@ function llama_get_windowtitle() {
 	return get_option ( LLAMA_SETTING_WINDOWTITLE, "Llamada gratis" );
 }
 function llama_get_baseurl() {
-	return get_option ( LLAMA_SETTING_BASEURL );
+	return get_option ( LLAMA_SETTING_BASEURL, 'http://pbx.llamegratisenlinea.com/click2dial/callme.php?site=%s&user=%s' );
+}
+function llama_get_userid() {
+	return get_option ( LLAMA_SETTING_USERID );
 }
 function llama_get_siteid() {
 	return get_option ( LLAMA_SETTING_SITEID );
@@ -233,7 +246,7 @@ function llama_site_header_script_config() {
 			'image' => llama_get_image(),
 			'imageTitle' => llama_get_imagetitle(),
 			'windowTitle' => llama_get_windowtitle(),
-			'url' => sprintf( llama_get_baseurl(), llama_get_siteid() ),
+			'url' => sprintf( llama_get_baseurl(), llama_get_siteid(), llama_get_userid() ),
 			'enabled' => llama_get_enabled()
 		))
 	);
