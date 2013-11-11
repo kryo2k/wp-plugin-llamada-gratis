@@ -102,12 +102,14 @@
 		 '</div>'].join(''))
 			.appendTo(root);
 
-		$win.on('resize', debounce(centerWin,100,true));
+		$win.on('resize', debounce(centerWin,150));
 
 		$w.css({
 			width: windowWidth,
 			height: windowHeight
 		});
+
+		centerWin();
 
 		$o.addClass(baseCls + '-overlay').on('click', closeWin);
 
