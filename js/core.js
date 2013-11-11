@@ -51,7 +51,7 @@
 			$w.remove();
 		};
 		$o = $('<div>').appendTo(root);
-		$w = $(['<div class="'+baseCls+'-window fw360">',
+		$w = $(['<div class="'+baseCls+'-window fixed">',
 		 	'<div class="'+baseCls+'-wrapper">',
 		 		'<a class="'+baseCls+'-button"></a>',
 		 		'<h3 class="'+baseCls+'-title"></h3>',
